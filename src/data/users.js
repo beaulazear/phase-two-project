@@ -8,6 +8,16 @@ const users = [
         name: "Vanessa",
         username: "vanessar",
         pass: "riverrocks"
+    },
+    {
+        name: "Diana",
+        username: "lakelady411",
+        pass: "fergie55"
+    },
+    {
+        name: "Madeline",
+        username: "madeline",
+        pass: "stark"
     }
 ]
 

@@ -46,7 +46,7 @@ export default function TodaysWeather() {
 
     return (
         <div id="todaysWeatherDiv">
-            <p className="pageHeaders">Location: Brooklyn NY<br></br>
+            <p className="pageHeaders">Here is the weather in Brooklyn NY<br></br>
                 It is currently {currentTempature} °F, and it feels like {currentFeelsLike} °F
                 <br></br>
                 prepare accordingly!
