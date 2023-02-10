@@ -21,7 +21,7 @@ export default function TodaysWeather() {
     }
 
     function getLatAndLong() {
-        fetch(`http://api.openweathermap.org/geo/1.0/direct?q=brooklyn,ny,us&limit=1&appid=${MY_KEY}`)
+        fetch(`https://api.openweathermap.org/geo/1.0/direct?q=brooklyn,ny,us&limit=1&appid=${MY_KEY}`)
             .then((resp) => resp.json())
             .then((locationData) => {
 
