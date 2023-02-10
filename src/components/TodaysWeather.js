@@ -7,7 +7,6 @@ export default function TodaysWeather() {
     const [currentTempature, setCurrentTempature] = useState(null)
     const [currentFeelsLike, setCurrentFeelsLike] = useState(null)
     const MY_WEATHER_KEY = process.env.REACT_APP_API_KEY;
-    console.log(MY_WEATHER_KEY)
 
     useEffect(() => getLatAndLong(), [])
 
