@@ -21,7 +21,7 @@ export default function Login({ setLoggedIn }) {
             <form id="loginForm" onSubmit={handleLogIn}>
                 <input placeholder="Username" type="text" name="user_name" />
                 <br></br><br></br>
-                <input placeholder="Password" type="text" name="password" />
+                <input placeholder="Password" type="password" name="password" />
                 <br></br><br></br>
                 <button className="button-18" type="submit">Log In</button>
             </form>
