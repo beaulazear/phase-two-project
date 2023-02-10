@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import TodaysDate from "./TodaysDate";
 
 
 export default function TodaysWeather() {
@@ -8,6 +7,8 @@ export default function TodaysWeather() {
     const [currentTempature, setCurrentTempature] = useState(null)
     const [currentFeelsLike, setCurrentFeelsLike] = useState(null)
     const MY_KEY = process.env.REACT_APP_API_KEY;
+    console.log(process.env)
+    console.log(MY_KEY)
 
     useEffect(() => getLatAndLong(), [])
 
