@@ -6,14 +6,13 @@ export default function TodaysWeather() {
     const [currentWeather, setCurrentWeather] = useState(null)
     const [currentTempature, setCurrentTempature] = useState(null)
     const [currentFeelsLike, setCurrentFeelsLike] = useState(null)
-    const MY_KEY = process.env.REACT_APP_API_KEY;
-    console.log(process.env)
-    console.log(MY_KEY)
+    const MY_WEATHER_KEY = process.env.REACT_APP_API_KEY;
+    console.log(MY_WEATHER_KEY)
 
     useEffect(() => getLatAndLong(), [])
 
     function getCurrentWeather(lat, lon) {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${MY_KEY}`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${MY_WEATHER_KEY}`)
             .then((resp) => resp.json())
             .then((weatherData) => {
                 convertTempThenSet(weatherData.main.temp.toString(), weatherData.main.feels_like.toString())
@@ -22,7 +21,7 @@ export default function TodaysWeather() {
     }
 
     function getLatAndLong() {
-        fetch(`https://api.openweathermap.org/geo/1.0/direct?q=brooklyn,ny,us&limit=1&appid=${MY_KEY}`)
+        fetch(`https://api.openweathermap.org/geo/1.0/direct?q=brooklyn,ny,us&limit=1&appid=${MY_WEATHER_KEY}`)
             .then((resp) => resp.json())
             .then((locationData) => {
 
