@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/phase-two-project/static/css/main.4fdf0ab2.css",
-    "main.js": "/phase-two-project/static/js/main.8d344afd.js",
+    "main.css": "/phase-two-project/static/css/main.2ae32d3c.css",
+    "main.js": "/phase-two-project/static/js/main.083ed26f.js",
     "static/js/787.8f96087a.chunk.js": "/phase-two-project/static/js/787.8f96087a.chunk.js",
-    "static/media/dogpawbackground.jpg": "/phase-two-project/static/media/dogpawbackground.b07f7eb57b8f33643a98.jpg",
+    "static/media/dog-lined-hand-drawn-abstract-vector-illustration.jpg": "/phase-two-project/static/media/dog-lined-hand-drawn-abstract-vector-illustration.1d2f1b6528b7046d2b04.jpg",
     "index.html": "/phase-two-project/index.html",
-    "main.4fdf0ab2.css.map": "/phase-two-project/static/css/main.4fdf0ab2.css.map",
-    "main.8d344afd.js.map": "/phase-two-project/static/js/main.8d344afd.js.map",
+    "main.2ae32d3c.css.map": "/phase-two-project/static/css/main.2ae32d3c.css.map",
+    "main.083ed26f.js.map": "/phase-two-project/static/js/main.083ed26f.js.map",
     "787.8f96087a.chunk.js.map": "/phase-two-project/static/js/787.8f96087a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4fdf0ab2.css",
-    "static/js/main.8d344afd.js"
+    "static/css/main.2ae32d3c.css",
+    "static/js/main.083ed26f.js"
   ]
 }
