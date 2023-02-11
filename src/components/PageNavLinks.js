@@ -4,7 +4,6 @@ import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
 export default function PageNavLinks({ setLoggedOut }) {
 
     function handleLogout(event) {
-        console.log(event.target)
         setLoggedOut()
     }
 

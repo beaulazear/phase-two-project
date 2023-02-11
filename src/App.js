@@ -8,26 +8,30 @@ import ViewPack from './components/ViewPack';
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false)
+  const [currentUser, setCurrentUser] = useState(null)
 
-  function setLoggedIn() {
+  function setLoggedIn(e) {
     setIsLoggedIn(true)
   }
   function setLoggedOut() {
     setIsLoggedIn(false)
   }
+  function setUser(user) {
+    setCurrentUser(user)
+  }
 
-  if (loggedIn === false) return <Home setLoggedIn={setLoggedIn} />
+  if (loggedIn === false) return <Home setUser={setUser} setLoggedIn={setLoggedIn} />
 
   return (
     <div>
       <Switch>
         <Route path="/viewpack">
-          <PageNavLinks />
-          <ViewPack />
+          <PageNavLinks setLoggedOut={setLoggedOut}/>
+          <ViewPack currentUser={currentUser}/>
         </Route>
         <Route path="/">
           <PageNavLinks setLoggedOut={setLoggedOut} />
-          <TodaysWalks />
+          <TodaysWalks currentUser={currentUser}/>
         </Route>
       </Switch>
     </div>

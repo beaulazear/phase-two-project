@@ -1,13 +1,14 @@
 import React from "react";
 import { users } from "../data/users";
 
-export default function Login({ setLoggedIn }) {
+export default function Login({ setLoggedIn, setUser }) {
 
     function handleLogIn(e) {
         e.preventDefault()
         users.map((user) => {
             if (user.username === e.target.user_name.value && user.pass === e.target.password.value) {
                 setLoggedIn()
+                setUser(e.target.user_name.value)
             } else {
                 console.log("Failed login attempt")
             }

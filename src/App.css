@@ -1,6 +1,6 @@
 
 .loginDiv {
-  font-family:fantasy;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: left;
   border: 5px solid;
   margin: auto;
@@ -12,11 +12,12 @@
 }
 
 html{
-  background-image: url(/src/images/dogpawbackground.jpg);
+  background-image: url(/src/images/dog-lined-hand-drawn-abstract-vector-illustration.jpg);
+  /* src/images/dog-lined-hand-drawn-abstract-vector-illustration.jpg */
 }
 
 .pageHeaders{
-  font-family: fantasy;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
 }
 
@@ -26,7 +27,7 @@ html{
 }
 .dogCard {
   font-size: larger;
-  font-family: fantasy;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: left;
   border: 5px solid;
   width: 350px;
@@ -101,7 +102,7 @@ html{
 }
 #todaysWeatherDiv {
   font-size: larger;
-  font-family: fantasy;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: left;
   border: 5px solid;
   width: 350px;

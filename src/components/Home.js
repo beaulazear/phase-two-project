@@ -2,11 +2,11 @@ import React from "react";
 import Login from "./Login";
 import NewClient from "./NewClient";
 
-export default function Home({ setLoggedIn }) {
+export default function Home({ setLoggedIn, setUser }) {
     return (
         <div className="loginHeader">
             <h1>justWalks</h1>
-            <Login setLoggedIn={setLoggedIn} />
+            <Login setUser={setUser} setLoggedIn={setLoggedIn} />
             <br></br>
             <NewClient />
             <br></br>
