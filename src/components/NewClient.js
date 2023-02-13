@@ -6,17 +6,13 @@ export default function NewClient() {
     function requestFormSubmit(event) {
 
         event.preventDefault();
-
-        //Takes new client form data and makes a new object with it. Adds that object to an array. Later this should be changed to a database post request to store client requests.
         
-        let requestFormDataArr =[]
         let requestFormData = {
             name: event.target.name.value,
             email: event.target.email.value,
             request: event.target.request.value
         }
-        requestFormDataArr.push(requestFormData)
-        console.log(requestFormDataArr)
+        console.log(requestFormData)
     }
 
     return (
