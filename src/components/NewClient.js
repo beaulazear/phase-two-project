@@ -1,4 +1,3 @@
-import { func } from "prop-types";
 import React from "react";
 
 export default function NewClient() {
@@ -6,12 +5,15 @@ export default function NewClient() {
     function requestFormSubmit(event) {
 
         event.preventDefault();
-        
+
         let requestFormData = {
             name: event.target.name.value,
             email: event.target.email.value,
             request: event.target.request.value
         }
+
+        // post regquest to http://localhost:3000/requests, fetch currently not working with json-server 
+
         console.log(requestFormData)
     }
 
@@ -22,9 +24,9 @@ export default function NewClient() {
             <form onSubmit={requestFormSubmit}>
                 <input placeholder="Name" type="text" name="name" />
                 <br></br><br></br>
-                <input placeholder="Email" type="text" name="email"/>
+                <input placeholder="Email" type="text" name="email" />
                 <br></br><br></br>
-                <p>Tell me about yourself, and the services you're requesting!</p><textarea type="textarea" name="request"/>
+                <p>Tell me about yourself, and the services you're requesting!</p><textarea type="textarea" name="request" />
                 <br></br><br></br>
                 <button className="button-18" type="submit">Submit</button>
             </form>

@@ -6,10 +6,14 @@ import PageNavLinks from "./PageNavLinks";
 export default function AddNewDog({ setLoggedOut, currentUser }) {
 
     const newDogTitle = "Add New Dog"
+    
+    // this code causes site to crash, white screen with no rendering error, except in console.
 
-    useEffect(() => {
-        fetch('')
-    })
+    // useEffect(() => {
+    //     fetch('http://localhost:3000/dogs')
+    //     .then((resp) => resp.json())
+    //     .then((data) => console.log(data))
+    // })
 
     function handleNewDogFormSubmit(e) {
         e.preventDefault()
@@ -21,6 +25,9 @@ export default function AddNewDog({ setLoggedOut, currentUser }) {
             walkDuration: e.target.walkduration.value,
             bio: e.target.bio.value
         }
+
+        // post regquest to http://localhost:3000/dogs, fetch currently not working with json-server 
+        
         console.log(newDogObj)
     }
     

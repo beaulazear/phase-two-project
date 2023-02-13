@@ -246,12 +246,70 @@
       }
     },
     {
+      "id": 14,
+      "name": "Mauve W",
+      "image": null,
+      "bio": "Mom buzzes you in, no key. HArness and leash hanging as you enter. Collar comes off after walk, paws wiped as well.",
+      "address": "240 President St apt 6",
+      "walkTime": "1/2pm",
+      "walkDuration": "30 minutes",
+      "days": {
+        "1": true,
+        "2": false,
+        "3": true,
+        "4": false,
+        "5": false,
+        "6": false,
+        "0": false,
+        "Unscheduled": false
+      }
+    },
+    {
+      "id": 15,
+      "name": "Eliza B",
+      "image": null,
+      "bio": "Eliza walks pretty slow, good match with Java! Must carry down stairs, but will run up them herself!",
+      "address": "97 1st place apt 2",
+      "walkTime": "11:45am",
+      "walkDuration": "30 minutes",
+      "days": {
+        "1": false,
+        "2": true,
+        "3": false,
+        "4": true,
+        "5": false,
+        "6": false,
+        "0": false,
+        "Unscheduled": false
+      }
+    },
+    {
+      "id": 16,
+      "name": "Crouton K",
+      "image": null,
+      "bio": "Crouton walks well with smaller dogs! IS leash reactive to large dogs. (Already aquainted with Moose Z. though) Will try to eat trash, very quick at it too!",
+      "address": "398 Warren st apr 1R",
+      "walkTime": "12/3pm",
+      "walkDuration": "30 minutes",
+      "days": {
+        "1": false,
+        "2": true,
+        "3": false,
+        "4": true,
+        "5": false,
+        "6": false,
+        "0": false,
+        "Unscheduled": false
+      }
+    },
+    {
+      "id": 17,
       "name": "Bellini",
-      "image": "images/Wally.jpg",
+      "image": null,
       "bio": "Select which day you would like to view from the dropbox below. All scheduled dogs will then be uploaded, along with the",
-      "address": "666 Grace Ct",
-      "walkTime": "12pm",
-      "walkDuration": "45 minutes",
+      "address": "280 President St apt 12",
+      "walkTime": "1/2pm",
+      "walkDuration": "30 minutes",
       "days": {
         "Monday": false,
         "Tuesday": false,
@@ -260,8 +318,7 @@
         "Friday": false,
         "Saturday": true,
         "Sunday": true
-      },
-      "id": 14
+      }
     }
   ]
 }

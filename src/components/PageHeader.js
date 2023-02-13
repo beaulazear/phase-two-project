@@ -5,6 +5,7 @@ export default function PageHeader({ currentUser, title, setLoggedOut }) {
     function handleLogout() {
         setLoggedOut()
     }
+    
     return (
         <div className="pageHeaderDiv">
             <h1 className="pageHeaders">{title}</h1>
