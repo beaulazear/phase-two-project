@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/phase-two-project/static/css/main.594f32ea.css",
-    "main.js": "/phase-two-project/static/js/main.890c6626.js",
+    "main.js": "/phase-two-project/static/js/main.d569d7a4.js",
     "static/js/787.8f96087a.chunk.js": "/phase-two-project/static/js/787.8f96087a.chunk.js",
     "static/media/dog-lined-hand-drawn-abstract-vector-illustration.jpg": "/phase-two-project/static/media/dog-lined-hand-drawn-abstract-vector-illustration.1d2f1b6528b7046d2b04.jpg",
     "index.html": "/phase-two-project/index.html",
     "main.594f32ea.css.map": "/phase-two-project/static/css/main.594f32ea.css.map",
-    "main.890c6626.js.map": "/phase-two-project/static/js/main.890c6626.js.map",
+    "main.d569d7a4.js.map": "/phase-two-project/static/js/main.d569d7a4.js.map",
     "787.8f96087a.chunk.js.map": "/phase-two-project/static/js/787.8f96087a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.594f32ea.css",
-    "static/js/main.890c6626.js"
+    "static/js/main.d569d7a4.js"
   ]
 }
