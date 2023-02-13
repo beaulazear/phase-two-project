@@ -1,21 +1,12 @@
 {
-  "posts": [
+  "requestFormSubmits": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Beau",
+      "email": "beaulazear@yahoot.net",
+      "request": "requesting services for my dog"
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "dogs": [
     {
       "id": 1,

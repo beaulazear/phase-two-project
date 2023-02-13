@@ -175,8 +175,8 @@ const dogs = [
         "3": true,
         "4": true,
         "5": true,
-        "6": false,
-        "0": false
+        "6": true,
+        "0": true
       }
     },
     {
@@ -238,16 +238,4 @@ const dogs = [
     }
   ]
 
-  let todaysDate = new Date();
-  let todaysWeekDay = todaysDate.getDay()
-  let todaysWeekDayString = todaysWeekDay.toString()
-
-  let todaysWalksArr = []
-  dogs.forEach((dog) => {
-      if (dog.days[todaysWeekDayString] === true) {
-          todaysWalksArr.push(dog)
-      }
-  })
-
-
-  export { dogs,todaysWalksArr }
+  export { dogs }

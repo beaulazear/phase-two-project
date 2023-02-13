@@ -5,7 +5,7 @@ export default function Login({ setLoggedIn, setUser }) {
 
     function handleLogIn(e) {
         e.preventDefault()
-        users.map((user) => {
+        users.forEach((user) => {
             if (user.username === e.target.user_name.value && user.pass === e.target.password.value) {
                 setLoggedIn()
                 setUser(e.target.user_name.value)
@@ -16,7 +16,7 @@ export default function Login({ setLoggedIn, setUser }) {
     }
 
     return (
-        <div className="loginDiv">
+        <div className="homeAndFormDivs">
             <h1>User Log In</h1>
             <p>Walk time is the perfect tool for the independant dog walker! Users log in below to gain access to your current schedule, check the weather for the day, and more!</p>
             <form id="loginForm" onSubmit={handleLogIn}>

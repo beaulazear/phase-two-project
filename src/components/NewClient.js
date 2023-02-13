@@ -20,7 +20,7 @@ export default function NewClient() {
     }
 
     return (
-        <div className="loginDiv">
+        <div className="homeAndFormDivs">
             <h1>Request Information</h1>
             <p>Are you in need of a new animal care routine, or are you an aspiring professional pet sitter? If so, fill out the form below, and I will be in touch shortly! Please visit my website <a href="https://beaulazear.com/">www.beaulazear.com</a> for additional Information.</p>
             <form onSubmit={requestFormSubmit}>
