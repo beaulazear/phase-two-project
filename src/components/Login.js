@@ -5,12 +5,11 @@ export default function Login({ setLoggedIn, setUser }) {
 
     function handleLogIn(e) {
         e.preventDefault()
-        users.forEach((user) => {
+
+        users.find((user) => {
             if (user.username === e.target.user_name.value && user.pass === e.target.password.value) {
                 setLoggedIn()
                 setUser(e.target.user_name.value)
-            } else {
-                console.log("Failed login attempt")
             }
         })
     }

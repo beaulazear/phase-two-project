@@ -22,6 +22,10 @@ function App() {
 
   if (loggedIn === false) return <Home setUser={setUser} setLoggedIn={setLoggedIn} />
 
+
+  // restful route would be /dogs/new
+
+
   return (
     <div>
       <Switch>

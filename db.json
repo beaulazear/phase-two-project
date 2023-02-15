@@ -5,25 +5,31 @@
       "name": "Beau",
       "email": "beaulazear@yahoot.net",
       "request": "requesting services for my dog"
+    },
+    {
+      "name": "Beau",
+      "email": "beaulazear@gmail.com",
+      "request": "Need dog walks!",
+      "id": 2
     }
   ],
   "dogs": [
     {
       "id": 1,
       "name": "Ralph T.",
-      "image": "images/Ralph.jpg",
+      "image": "../images/ralph.jpg",
       "bio": "Pees when you leash him up, but only because he loves you. Gets along great with other dogs, very playful.",
       "address": "368 Warren St",
       "walkTime": "12pm",
       "walkDuration": "30 minutes",
       "days": {
-        "Monday": true,
-        "Tuesday": true,
-        "Wednesday": true,
-        "Thursday": true,
-        "Friday": true,
-        "Saturday": false,
-        "Sunday": false
+        "0": false,
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": false
       }
     },
     {
@@ -35,13 +41,13 @@
       "walkTime": "10am",
       "walkDuration": "30 minutes",
       "days": {
-        "Monday": true,
-        "Tuesday": true,
-        "Wednesday": true,
-        "Thursday": true,
-        "Friday": true,
-        "Saturday": false,
-        "Sunday": false
+        "0": false,
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": false
       }
     },
     {
@@ -53,13 +59,13 @@
       "walkTime": "4:30m",
       "walkDuration": "30 minutes",
       "days": {
-        "Monday": false,
-        "Tuesday": false,
-        "Wednesday": false,
-        "Thursday": false,
-        "Friday": true,
-        "Saturday": false,
-        "Sunday": false
+        "0": false,
+        "1": false,
+        "2": false,
+        "3": false,
+        "4": false,
+        "5": true,
+        "6": false
       }
     },
     {
@@ -71,13 +77,13 @@
       "walkTime": "12:30 pm",
       "walkDuration": "30 minutes",
       "days": {
-        "Monday": false,
-        "Tuesday": true,
-        "Wednesday": true,
-        "Thursday": true,
-        "Friday": false,
-        "Saturday": false,
-        "Sunday": false
+        "0": false,
+        "1": false,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": false,
+        "6": false
       }
     },
     {
@@ -89,13 +95,13 @@
       "walkTime": "11:30am & 3:30pm",
       "walkDuration": "30 minutes",
       "days": {
-        "Monday": false,
-        "Tuesday": true,
-        "Wednesday": false,
-        "Thursday": true,
-        "Friday": false,
-        "Saturday": false,
-        "Sunday": false
+        "0": false,
+        "1": false,
+        "2": true,
+        "3": false,
+        "4": true,
+        "5": false,
+        "6": false
       }
     },
     {
@@ -107,13 +113,13 @@
       "walkTime": "12:30pm",
       "walkDuration": "60 minutes",
       "days": {
-        "Monday": false,
-        "Tuesday": true,
-        "Wednesday": false,
-        "Thursday": true,
-        "Friday": true,
-        "Saturday": false,
-        "Sunday": false
+        "0": false,
+        "1": false,
+        "2": true,
+        "3": false,
+        "4": true,
+        "5": true,
+        "6": false
       }
     },
     {
@@ -125,13 +131,13 @@
       "walkTime": "2:30pm",
       "walkDuration": "30 minutes",
       "days": {
-        "Monday": false,
-        "Tuesday": true,
-        "Wednesday": true,
-        "Thursday": true,
-        "Friday": false,
-        "Saturday": false,
-        "Sunday": false
+        "0": false,
+        "1": false,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": false,
+        "6": false
       }
     },
     {
@@ -143,13 +149,13 @@
       "walkTime": "1:30pm",
       "walkDuration": "60 minutes",
       "days": {
-        "Monday": true,
-        "Tuesday": false,
-        "Wednesday": true,
-        "Thursday": false,
-        "Friday": false,
-        "Saturday": false,
-        "Sunday": false
+        "0": false,
+        "1": true,
+        "2": false,
+        "3": true,
+        "4": false,
+        "5": false,
+        "6": false
       }
     },
     {
@@ -161,13 +167,13 @@
       "walkTime": "2:30pm",
       "walkDuration": "90 minutes",
       "days": {
-        "Monday": true,
-        "Tuesday": true,
-        "Wednesday": false,
-        "Thursday": false,
-        "Friday": false,
-        "Saturday": false,
-        "Sunday": false
+        "0": false,
+        "1": true,
+        "2": true,
+        "3": false,
+        "4": false,
+        "5": false,
+        "6": false
       }
     },
     {
@@ -179,13 +185,13 @@
       "walkTime": "5pm",
       "walkDuration": "30 minutes",
       "days": {
-        "Monday": true,
-        "Tuesday": true,
-        "Wednesday": true,
-        "Thursday": true,
-        "Friday": true,
-        "Saturday": false,
-        "Sunday": false
+        "0": false,
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": false
       }
     },
     {
@@ -197,13 +203,13 @@
       "walkTime": "11am",
       "walkDuration": "60 minutes",
       "days": {
-        "Monday": false,
-        "Tuesday": false,
-        "Wednesday": false,
-        "Thursday": false,
-        "Friday": false,
-        "Saturday": false,
-        "Sunday": false,
+        "0": false,
+        "1": false,
+        "2": false,
+        "3": false,
+        "4": false,
+        "5": false,
+        "6": false,
         "Unscheduled": true
       }
     },
@@ -216,13 +222,13 @@
       "walkTime": "when requested",
       "walkDuration": "120 minutes",
       "days": {
-        "Monday": false,
-        "Tuesday": false,
-        "Wednesday": false,
-        "Thursday": false,
-        "Friday": false,
-        "Saturday": false,
-        "Sunday": false,
+        "0": false,
+        "1": false,
+        "2": false,
+        "3": false,
+        "4": false,
+        "5": false,
+        "6": false,
         "Unscheduled": true
       }
     },
@@ -235,13 +241,13 @@
       "walkTime": "6:30pm",
       "walkDuration": "30 minutes",
       "days": {
-        "Monday": false,
-        "Tuesday": false,
-        "Wednesday": false,
-        "Thursday": false,
-        "Friday": false,
-        "Saturday": false,
-        "Sunday": false,
+        "0": false,
+        "1": false,
+        "2": false,
+        "3": false,
+        "4": false,
+        "5": false,
+        "6": false,
         "Unscheduled": true
       }
     },
@@ -254,13 +260,13 @@
       "walkTime": "1/2pm",
       "walkDuration": "30 minutes",
       "days": {
+        "0": false,
         "1": true,
         "2": false,
         "3": true,
         "4": false,
         "5": false,
         "6": false,
-        "0": false,
         "Unscheduled": false
       }
     },
@@ -273,13 +279,13 @@
       "walkTime": "11:45am",
       "walkDuration": "30 minutes",
       "days": {
+        "0": false,
         "1": false,
         "2": true,
         "3": false,
         "4": true,
         "5": false,
         "6": false,
-        "0": false,
         "Unscheduled": false
       }
     },
@@ -292,32 +298,32 @@
       "walkTime": "12/3pm",
       "walkDuration": "30 minutes",
       "days": {
+        "0": false,
         "1": false,
         "2": true,
         "3": false,
         "4": true,
         "5": false,
         "6": false,
-        "0": false,
         "Unscheduled": false
       }
     },
     {
       "id": 17,
-      "name": "Bellini",
+      "name": "Bellini S",
       "image": null,
-      "bio": "Select which day you would like to view from the dropbox below. All scheduled dogs will then be uploaded, along with the",
+      "bio": "Leash hanging up as you walk in, walks great with all other dogs! Wipe off paws after every walk.",
       "address": "280 President St apt 12",
       "walkTime": "1/2pm",
       "walkDuration": "30 minutes",
       "days": {
-        "Monday": false,
-        "Tuesday": false,
-        "Wednesday": false,
-        "Thursday": false,
-        "Friday": false,
-        "Saturday": true,
-        "Sunday": true
+        "0": true,
+        "1": false,
+        "2": false,
+        "3": false,
+        "4": false,
+        "5": false,
+        "6": true
       }
     }
   ]

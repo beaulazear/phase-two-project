@@ -3,27 +3,31 @@ import WalkCard from "./WalkCard";
 import TodaysWeather from "./TodaysWeather";
 import PageNavLinks from "./PageNavLinks";
 import PageHeader from "./PageHeader";
-import { dogs } from "../data/dogs";
 
 export default function TodaysWalks({ currentUser, setLoggedOut }) {
 
     const [todaysWalks, setTodaysWalks] = useState(null)
     const todaysWalkstitle = "Today's Walks"
 
-    let todaysDate = new Date();
-    let todaysWeekDay = todaysDate.getDay()
-    let todaysWeekDayString = todaysWeekDay.toString()
-  
-    let todaysWalksArr = []
-    dogs.forEach((dog) => {
-        if (dog.days[todaysWeekDayString] === true) {
-            todaysWalksArr.push(dog)
-        }
-    })
-
-
     useEffect(() => {
-        setTodaysWalks(todaysWalksArr)
+        fetch('http://localhost:3000/dogs')
+        .then((resp) => resp.json())
+        .then((data) => {
+            console.log(data)
+
+            let todaysDate = new Date();
+            let todaysWeekDay = todaysDate.getDay()
+            let todaysWeekDayString = todaysWeekDay.toString()
+
+            let todaysWalksArr = []
+
+            data.forEach((dog) => {
+                if (dog.days[todaysWeekDayString] === true) {
+                    todaysWalksArr.push(dog)
+                }
+            })
+            setTodaysWalks(todaysWalksArr)
+        })
     }, [])
 
     if (!todaysWalks) return <p>...loading</p>

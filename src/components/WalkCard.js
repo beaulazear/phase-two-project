@@ -2,8 +2,7 @@ import React from "react";
 
 export default function WalkCard({ dog }) {
 
-    let todaysDate = new Date()
-    let todaysDay = todaysDate.getDay()
+    if (!dog.name) return <h2>Dog card will load here once you start filling out the form!</h2>
 
     return (
         <div className="dogCard">

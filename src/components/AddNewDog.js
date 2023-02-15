@@ -1,36 +1,54 @@
-import React, { useEffect } from "react";
-import { dogs } from "../data/dogs";
+import React, { useState } from "react";
 import PageHeader from "./PageHeader";
 import PageNavLinks from "./PageNavLinks";
+import WalkCard from "./WalkCard";
 
 export default function AddNewDog({ setLoggedOut, currentUser }) {
 
     const newDogTitle = "Add New Dog"
-    
-    // this code causes site to crash, white screen with no rendering error, except in console.
 
-    // useEffect(() => {
-    //     fetch('http://localhost:3000/dogs')
-    //     .then((resp) => resp.json())
-    //     .then((data) => console.log(data))
-    // })
+    const [dogName, setDogName] = useState(null)
+    const [dogAddress, setDogAddress] = useState(null)
+    const [dogWalkDuration, setDogWalkDuration] = useState(null)
+    const [dogWalkTime, setDogWalkTime] = useState(null)
+    const [dogBio, setDogBio] = useState(null)
+
+    function handleAddDogName(e) {
+        setDogName(e.target.value)
+    }
+    function handleAddDogAddress(e) {
+        setDogAddress(e.target.value)
+    }
+    function handleAddDogWalkDuration(e) {
+        setDogWalkDuration(e.target.value)
+    }
+    function handleAddDogWalkTime(e) {
+        setDogWalkTime(e.target.value)
+    }
+    function handleAddDogBio(e) {
+        setDogBio(e.target.value)
+    }
+
+    let dog = {
+        name: dogName,
+        address: dogAddress,
+        walkTime: dogWalkTime,
+        walkDuration: dogWalkDuration,
+        bio: dogBio
+    }
 
     function handleNewDogFormSubmit(e) {
         e.preventDefault()
 
-        let newDogObj = {
-            name: e.target.animalname.value,
-            address: e.target.address.value,
-            walkTime: e.target.walktime.value,
-            walkDuration: e.target.walkduration.value,
-            bio: e.target.bio.value
-        }
-
-        // post regquest to http://localhost:3000/dogs, fetch currently not working with json-server 
-        
-        console.log(newDogObj)
+        fetch('http://localhost:3000/dogs', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dog)
+        })
     }
-    
+
     return (
         <div className="addNewDogDiv">
             <PageNavLinks />
@@ -39,19 +57,24 @@ export default function AddNewDog({ setLoggedOut, currentUser }) {
             <div className="homeAndFormDivs">
                 <h1>New Dog Form</h1>
                 <form onSubmit={handleNewDogFormSubmit}>
-                    <input placeholder="Animal's name" type="text" name="animalname" />
+                    <input onChange={handleAddDogName} placeholder="Animal's name" type="text" name="animalname" />
                     <br></br><br></br>
-                    <input placeholder="Address of walk location" type="text" name="address" />
+                    <input onChange={handleAddDogAddress} placeholder="Address of walk location" type="text" name="address" />
                     <br></br><br></br>
-                    <input placeholder="Walk duration" type="text" name="walkduration" />
+                    <input onChange={handleAddDogWalkDuration} placeholder="Walk duration" type="text" name="walkduration" />
                     <br></br><br></br>
-                    <input placeholder="Time of walk" type="text" name="walktime" />
+                    <input onChange={handleAddDogWalkTime} placeholder="Time of walk" type="text" name="walktime" />
                     <br></br><br></br>
-                    <textarea rows={8} cols={40} placeholder="Additional information needed for the walk!" name="bio"/>
+                    <textarea onChange={handleAddDogBio} rows={8} cols={40} placeholder="Additional information needed for the walk!" name="bio" />
                     <br></br>
                     <button className="button-18" type="submit">Submit</button>
+                    <br></br>
+                    <p>See below for an example of what the dog card will look like! Once submitted, your new dog will be added to the database.</p>
                 </form>
             </div>
+            <br></br>
+            <WalkCard dog={dog}/>
+            <br></br>
         </div>
     )
 

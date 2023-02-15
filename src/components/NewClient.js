@@ -12,8 +12,13 @@ export default function NewClient() {
             request: event.target.request.value
         }
 
-        // post regquest to http://localhost:3000/requests, fetch currently not working with json-server 
-
+        fetch('http://localhost:3000/requestFormSubmits', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestFormData)
+        })
         console.log(requestFormData)
     }
 
