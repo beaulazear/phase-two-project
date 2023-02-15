@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PageHeader from "./PageHeader";
 import PageNavLinks from "./PageNavLinks";
 import WalkCard from "./WalkCard";
@@ -6,6 +6,18 @@ import WalkCard from "./WalkCard";
 export default function AddNewDog({ setLoggedOut, currentUser }) {
 
     const newDogTitle = "Add New Dog"
+
+    const [currentDogArr, setCurrentDogArr] = useState(null)
+
+    function updateDogArr(newDog) {
+        setCurrentDogArr([...currentDogArr, newDog])
+    }
+
+    useEffect(() => {
+        fetch('http://localhost:3000/dogs')
+        .then((resp) => resp.json())
+        .then((data) => setCurrentDogArr(data))
+    },[])
 
     const [dogName, setDogName] = useState(null)
     const [dogAddress, setDogAddress] = useState(null)
@@ -47,7 +59,11 @@ export default function AddNewDog({ setLoggedOut, currentUser }) {
             },
             body: JSON.stringify(dog)
         })
+        .then((resp) => resp.json())
+        .then((data) => updateDogArr(data))
     }
+
+    if (!currentDogArr) return <p>...loading</p>
 
     return (
         <div className="addNewDogDiv">
@@ -74,6 +90,11 @@ export default function AddNewDog({ setLoggedOut, currentUser }) {
             </div>
             <br></br>
             <WalkCard dog={dog}/>
+            <br></br>
+            <h2 className="dogListHeader">Here is a list of names for every dog currently in the database!</h2>
+            {currentDogArr.map((dog) => {
+                return <li className="dogNameList">{dog.name}, {dog.address}</li>
+            })}
             <br></br>
         </div>
     )

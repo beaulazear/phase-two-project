@@ -75,6 +75,18 @@ html{
   padding: 0;
 }
 
+.dogNameList{
+  font-size: larger;
+  font-style: italic;
+  background-color: lightblue;
+  padding-top: 5px;
+}
+
+.dogListHeader{
+  background-color: lightblue;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 
 .button-18 {
   margin: 2px;
