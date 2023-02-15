@@ -77,5 +77,4 @@ export default function AddNewDog({ setLoggedOut, currentUser }) {
             <br></br>
         </div>
     )
-
 }

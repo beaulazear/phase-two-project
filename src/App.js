@@ -17,7 +17,8 @@ function App() {
     setIsLoggedIn(false)
   }
   function setUser(user) {
-    setCurrentUser(user)
+    setCurrentUser(user.name)
+    console.log("Current User:", user)
   }
 
   if (loggedIn === false) return <Home setUser={setUser} setLoggedIn={setLoggedIn} />

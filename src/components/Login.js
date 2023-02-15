@@ -6,12 +6,14 @@ export default function Login({ setLoggedIn, setUser }) {
     function handleLogIn(e) {
         e.preventDefault()
 
-        users.find((user) => {
-            if (user.username === e.target.user_name.value && user.pass === e.target.password.value) {
-                setLoggedIn()
-                setUser(e.target.user_name.value)
-            }
-        })
+        const foundUser = users.find((user) => user.username === e.target.user_name.value && user.pass === e.target.password.value)
+
+        if (!foundUser) {
+            window.alert("Invalid username or password")
+        } else {
+            setUser(foundUser)
+            setLoggedIn()
+        }
     }
 
     return (
