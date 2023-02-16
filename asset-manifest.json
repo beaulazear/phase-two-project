@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/phase-two-project/static/css/main.12e50492.css",
-    "main.js": "/phase-two-project/static/js/main.b9d5e1d7.js",
+    "main.css": "/phase-two-project/static/css/main.51dbc2cb.css",
+    "main.js": "/phase-two-project/static/js/main.c196e85a.js",
     "static/js/787.8f96087a.chunk.js": "/phase-two-project/static/js/787.8f96087a.chunk.js",
     "static/media/dog-lined-hand-drawn-abstract-vector-illustration.jpg": "/phase-two-project/static/media/dog-lined-hand-drawn-abstract-vector-illustration.1d2f1b6528b7046d2b04.jpg",
     "index.html": "/phase-two-project/index.html",
-    "main.12e50492.css.map": "/phase-two-project/static/css/main.12e50492.css.map",
-    "main.b9d5e1d7.js.map": "/phase-two-project/static/js/main.b9d5e1d7.js.map",
+    "main.51dbc2cb.css.map": "/phase-two-project/static/css/main.51dbc2cb.css.map",
+    "main.c196e85a.js.map": "/phase-two-project/static/js/main.c196e85a.js.map",
     "787.8f96087a.chunk.js.map": "/phase-two-project/static/js/787.8f96087a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.12e50492.css",
-    "static/js/main.b9d5e1d7.js"
+    "static/css/main.51dbc2cb.css",
+    "static/js/main.c196e85a.js"
   ]
 }
