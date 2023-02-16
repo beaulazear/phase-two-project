@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PageHeader from "./PageHeader";
 import PageNavLinks from "./PageNavLinks";
 import WalkCard from "./WalkCard";
@@ -7,11 +7,16 @@ export default function AddNewDog({ setLoggedOut, currentUser, dogs, updateCurre
 
     const newDogTitle = "Add New Dog"
 
-    const [dogName, setDogName] = useState(null)
-    const [dogAddress, setDogAddress] = useState(null)
-    const [dogWalkDuration, setDogWalkDuration] = useState(null)
-    const [dogWalkTime, setDogWalkTime] = useState(null)
-    const [dogBio, setDogBio] = useState(null)
+    const [dogName, setDogName] = useState('')
+    const [dogAddress, setDogAddress] = useState('')
+    const [dogWalkDuration, setDogWalkDuration] = useState('')
+    const [dogWalkTime, setDogWalkTime] = useState('')
+    const [dogBio, setDogBio] = useState('')
+    const [mondayChecked, setMondayChecked] = useState(false)
+    const [tuesdayChecked, setTuesdayChecked] = useState(false)
+    const [wednesdayChecked, setWednesdayChecked] = useState(false)
+    const [thursdayChecked, setThursdayChecked] = useState(false)
+    const [fridayChecked, setFridayChecked] = useState(false)
 
     function handleAddDogName(e) {
         setDogName(e.target.value)
@@ -28,13 +33,35 @@ export default function AddNewDog({ setLoggedOut, currentUser, dogs, updateCurre
     function handleAddDogBio(e) {
         setDogBio(e.target.value)
     }
+    function handleMondayCheckBox() {
+        setMondayChecked(!mondayChecked)
+    }
+    function handleTuesdayCheckBox() {
+        setTuesdayChecked(!tuesdayChecked)
+    }
+    function handleWednesdayCheckBox(e) {
+        setWednesdayChecked(!wednesdayChecked)
+    }
+    function handleThursdayCheckBox() {
+        setThursdayChecked(!thursdayChecked)
+    }
+    function handleFridayCheckBox() {
+        setFridayChecked(!fridayChecked)
+    }
 
     let dog = {
         name: dogName,
         address: dogAddress,
         walkTime: dogWalkTime,
         walkDuration: dogWalkDuration,
-        bio: dogBio
+        bio: dogBio,
+        days: {
+            "1": mondayChecked,
+            "2": tuesdayChecked,
+            "3": wednesdayChecked,
+            "4": thursdayChecked,
+            "5": fridayChecked
+        }
     }
 
     function handleNewDogFormSubmit(e) {
@@ -48,7 +75,23 @@ export default function AddNewDog({ setLoggedOut, currentUser, dogs, updateCurre
             body: JSON.stringify(dog)
         })
         .then((resp) => resp.json())
-        .then((data) => updateCurrentDogArr(data))
+        .then((data) => {
+            updateCurrentDogArr(data)
+
+            //resetting the controlled form by changing state
+            setDogAddress('')
+            setDogBio('')
+            setDogName('')
+            setDogWalkDuration('')
+            setDogWalkTime('')
+            setFridayChecked(false)
+            setThursdayChecked(false)
+            setWednesdayChecked(false)
+            setTuesdayChecked(false)
+            setMondayChecked(false)
+
+            window.alert('Dog has been submitted!')
+        })
     }
 
     if (!dogs) return <p>...loading</p>
@@ -61,28 +104,38 @@ export default function AddNewDog({ setLoggedOut, currentUser, dogs, updateCurre
             <div className="homeAndFormDivs">
                 <h1>New Dog Form</h1>
                 <form onSubmit={handleNewDogFormSubmit}>
-                    <input onChange={handleAddDogName} placeholder="Animal's name" type="text" name="animalname" />
+                    <input onChange={handleAddDogName} placeholder="Animal's name" value={dogName} type="text" name="animalname" />
                     <br></br><br></br>
-                    <input onChange={handleAddDogAddress} placeholder="Address of walk location" type="text" name="address" />
+                    <input onChange={handleAddDogAddress} placeholder="Address of walk location" value={dogAddress} type="text" name="address" />
                     <br></br><br></br>
-                    <input onChange={handleAddDogWalkDuration} placeholder="Walk duration" type="text" name="walkduration" />
+                    <input onChange={handleAddDogWalkDuration} placeholder="Walk duration" value={dogWalkDuration} type="text" name="walkduration" />
                     <br></br><br></br>
-                    <input onChange={handleAddDogWalkTime} placeholder="Time of walk" type="text" name="walktime" />
+                    <input onChange={handleAddDogWalkTime} placeholder="Time of walk" type="text" value={dogWalkTime} name="walktime" />
                     <br></br><br></br>
-                    <textarea onChange={handleAddDogBio} rows={8} cols={40} placeholder="Additional information needed for the walk!" name="bio" />
+                    <textarea value={dogBio} onChange={handleAddDogBio} rows={8} cols={40} placeholder="Additional information needed for the walk!" name="bio" />
+                    <br></br>
+                    <p>Select which day/days walks are needed!</p>
+                    <input id="monday" type="checkbox" name="monday" value={mondayChecked} onChange={handleMondayCheckBox}/>
+                    <label htmlFor="monday">Monday</label>
+                    <br></br>
+                    <input id="tuesday" type="checkbox" name="tuesday" value={tuesdayChecked} onChange={handleTuesdayCheckBox}/>
+                    <label htmlFor="tuesday">Tuesday</label>
+                    <br></br>
+                    <input id="wednesday" type="checkbox" name="wednesdayChecked" value={wednesdayChecked} onChange={handleWednesdayCheckBox}/>
+                    <label htmlFor="wednesday">Wednesday</label>
+                    <br></br>
+                    <input id="thursday" type="checkbox" name="thursday" value={thursdayChecked} onChange={handleThursdayCheckBox}/>
+                    <label htmlFor="thursday">Thursday</label>
+                    <br></br>
+                    <input id="friday" type="checkbox" name="friday" value={fridayChecked} onChange={handleFridayCheckBox}/>
+                    <label htmlFor="friday">Friday</label>
                     <br></br>
                     <button className="button-18" type="submit">Submit</button>
-                    <br></br>
                     <p>See below for an example of what the dog card will look like! Once submitted, your new dog will be added to the database.</p>
                 </form>
             </div>
             <br></br>
             <WalkCard dog={dog}/>
-            <br></br>
-            <h2 className="dogListHeader">Here is a list of names for every dog currently in the database!</h2>
-            {dogs.map((dog, index) => {
-                return <li key={index} className="dogNameList">{dog.name}, {dog.address}</li>
-            })}
             <br></br>
         </div>
     )
