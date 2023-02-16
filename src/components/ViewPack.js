@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import WalkCard from "./WalkCard";
 import PageNavLinks from "./PageNavLinks";
 import PageHeader from "./PageHeader";

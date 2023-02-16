@@ -115,19 +115,19 @@ export default function AddNewDog({ setLoggedOut, currentUser, dogs, updateCurre
                     <textarea value={dogBio} onChange={handleAddDogBio} rows={8} cols={40} placeholder="Additional information needed for the walk!" name="bio" />
                     <br></br>
                     <p>Select which day/days walks are needed!</p>
-                    <input id="monday" type="checkbox" name="monday" value={mondayChecked} onChange={handleMondayCheckBox}/>
+                    <input checked={!!mondayChecked} id="monday" type="checkbox" name="monday" value={mondayChecked} onChange={handleMondayCheckBox}/>
                     <label htmlFor="monday">Monday</label>
                     <br></br>
-                    <input id="tuesday" type="checkbox" name="tuesday" value={tuesdayChecked} onChange={handleTuesdayCheckBox}/>
+                    <input checked={!!tuesdayChecked}id="tuesday" type="checkbox" name="tuesday" value={tuesdayChecked} onChange={handleTuesdayCheckBox}/>
                     <label htmlFor="tuesday">Tuesday</label>
                     <br></br>
-                    <input id="wednesday" type="checkbox" name="wednesdayChecked" value={wednesdayChecked} onChange={handleWednesdayCheckBox}/>
+                    <input checked={!!wednesdayChecked} id="wednesday" type="checkbox" name="wednesdayChecked" value={wednesdayChecked} onChange={handleWednesdayCheckBox}/>
                     <label htmlFor="wednesday">Wednesday</label>
                     <br></br>
-                    <input id="thursday" type="checkbox" name="thursday" value={thursdayChecked} onChange={handleThursdayCheckBox}/>
+                    <input checked={!!thursdayChecked} id="thursday" type="checkbox" name="thursday" value={thursdayChecked} onChange={handleThursdayCheckBox}/>
                     <label htmlFor="thursday">Thursday</label>
                     <br></br>
-                    <input id="friday" type="checkbox" name="friday" value={fridayChecked} onChange={handleFridayCheckBox}/>
+                    <input checked={!!fridayChecked} id="friday" type="checkbox" name="friday" value={fridayChecked} onChange={handleFridayCheckBox}/>
                     <label htmlFor="friday">Friday</label>
                     <br></br>
                     <button className="button-18" type="submit">Submit</button>
