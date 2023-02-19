@@ -47,7 +47,7 @@ function App() {
           <AddNewDog addDog={addDog} dogs={dogs} />
         </Route>
         <Route path="/">
-          <TodaysWalks currentUser={currentUser} dogs={dogs} />
+          <TodaysWalks dogs={dogs} />
         </Route>
       </Switch>
     </div>

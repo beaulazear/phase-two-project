@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+All previous README information was provided by create-react-app, the following information was added my application creator.
+
+README
+
+    This application is my second phase project for the Flatiron School's software developement program. Its made for the independent dog walker, and show todays walks based off their uploaded dog data. Currently there is no database connected, so it can only be used while running a local json-server. 
+
+WEBSITE/CONTACT
+
+    my website is www.beaulazear.com, feel free to reach out with any questions about code / use.
+
+NOTICE
+
+    my background image was utilized from a free vecor website, and all credit goes to https://www.vecteezy.com/free-vector/dog-line-drawing

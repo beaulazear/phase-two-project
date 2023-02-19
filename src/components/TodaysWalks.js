@@ -2,7 +2,7 @@ import WalkCard from "./WalkCard";
 import TodaysWeather from "./TodaysWeather";
 import PageHeader from "./PageHeader";
 
-export default function TodaysWalks({ currentUser, setLoggedOut, dogs }) {
+export default function TodaysWalks({ setLoggedOut, dogs }) {
 
     const todaysWalkstitle = "Today's Walks"
 
@@ -14,7 +14,7 @@ export default function TodaysWalks({ currentUser, setLoggedOut, dogs }) {
 
     return (
         <div className="todaysWalksDiv">
-            <PageHeader setLoggedOut={setLoggedOut} currentUser={currentUser} title={todaysWalkstitle} />
+            <PageHeader setLoggedOut={setLoggedOut} title={todaysWalkstitle} />
             <TodaysWeather />
             <ul className="walkCardUl">
                 {todaysWalksArr.map((dog) => (

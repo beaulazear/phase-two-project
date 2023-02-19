@@ -19,7 +19,6 @@ export default function NewClient() {
             },
             body: JSON.stringify(requestFormData)
         })
-        console.log(requestFormData)
     }
 
     return (
