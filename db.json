@@ -11,6 +11,34 @@
       "email": "beaulazear@gmail.com",
       "request": "Need dog walks!",
       "id": 2
+    },
+    {
+      "name": "Yoin",
+      "email": "beaulazear@gmail.com",
+      "request": "Whats up",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "name": "Beau",
+      "username": "beaulazear",
+      "pass": "woofbark"
+    },
+    {
+      "name": "Vanessa",
+      "username": "vanessar",
+      "pass": "riverrocks"
+    },
+    {
+      "name": "Diana",
+      "username": "lakelady411",
+      "pass": "fergie55"
+    },
+    {
+      "name": "Madeline",
+      "username": "madeline",
+      "pass": "stark"
     }
   ],
   "dogs": [
@@ -118,7 +146,7 @@
         "2": true,
         "3": false,
         "4": true,
-        "5": true,
+        "5": false,
         "6": false
       }
     },
@@ -325,21 +353,6 @@
         "5": false,
         "6": true
       }
-    },
-    {
-      "name": "Beau",
-      "address": "827 Monroe St",
-      "walkTime": "2 pm",
-      "walkDuration": "30 minutes",
-      "bio": "bad dog!",
-      "days": {
-        "1": false,
-        "2": false,
-        "3": true,
-        "4": true,
-        "5": false
-      },
-      "id": 18
     }
   ]
 }

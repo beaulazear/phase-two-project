@@ -5,48 +5,49 @@ import { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import ViewPack from './components/ViewPack';
 import AddNewDog from './components/AddNewDog';
+import PageNavLinks from './components/PageNavLinks';
+import UserAndLogout from './components/UserAndLogout';
 
 function App() {
-  const [loggedIn, setIsLoggedIn] = useState(false)
-  const [currentUser, setCurrentUser] = useState(null)
-  const [currentDogArray, setCurrentDogArr] = useState(null)
+  const [dogs, setDogs] = useState([])
+  const [users, setUsers] = useState([])
+  const [currentUser, setCurrentUser] = useState(false)
+
+  useEffect(() => {
+      fetch('http://localhost:3000/users')
+      .then((resp) => resp.json())
+      .then((data) => setUsers(data))
+  },[])
 
   useEffect(() => {
     fetch('http://localhost:3000/dogs')
       .then((resp) => resp.json())
-      .then((data) => setCurrentDogArr(data))
+      .then((data) => setDogs(data))
   },[])
 
-  function updateCurrentDogArr(newDog) {
-    setCurrentDogArr([...currentDogArray, newDog])
+  function addDog(newDog) {
+    setDogs([...dogs, newDog])
   }
 
-  function setLoggedIn() {
-    setIsLoggedIn(true)
-  }
-  function setLoggedOut() {
-    setIsLoggedIn(false)
-  }
-  function setUser(user) {
-    setCurrentUser(user.name)
-    console.log("Current User:", user)
+  function handleSetCurrentUser(user) {
+    setCurrentUser(user)
   }
 
-  if (loggedIn === false) return <Home setUser={setUser} setLoggedIn={setLoggedIn} />
-
-  // restful route would be /dogs/new
+  if (currentUser === false) return <Home setCurrentUser={handleSetCurrentUser} users={users} />
 
   return (
     <div>
+      <PageNavLinks />
+      <UserAndLogout setCurrentUser={handleSetCurrentUser} currentUser={currentUser} />
       <Switch>
         <Route path="/viewpack">
-          <ViewPack dogs={currentDogArray} setLoggedOut={setLoggedOut} currentUser={currentUser} />
+          <ViewPack dogs={dogs} />
         </Route>
         <Route path="/addnewdog">
-          <AddNewDog updateCurrentDogArr={updateCurrentDogArr} dogs={currentDogArray} setLoggedOut={setLoggedOut} currentUser={currentUser} />
+          <AddNewDog addDog={addDog} dogs={dogs} />
         </Route>
         <Route path="/">
-          <TodaysWalks dogs={currentDogArray} setLoggedOut={setLoggedOut} currentUser={currentUser} />
+          <TodaysWalks currentUser={currentUser} dogs={dogs} />
         </Route>
       </Switch>
     </div>
