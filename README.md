@@ -1,3 +1,19 @@
+APPLICATION DESCRIPTION
+
+    This application is my second phase project for the Flatiron School's software developement program. It is made for the independent dog walker. When logged in, user will be displayed every walk to be completed on that day. Another page, view pack, displays every dog in your database. THe last page, add new dog, lets you upload a new dog to your database.
+
+PROGRAMMING LANGUAGES
+
+    This application uses a combination of Javascript, React, CSS, & HTML. All data is stored in a db.json file, and accessed via a json-server running. No real database connected yet.
+
+WEBSITE/CONTACT
+
+    my website is www.beaulazear.com, feel free to reach out with any questions about code / use.
+
+NOTICE
+
+    my background image was utilized from a free vector website, and all credit goes to https://www.vecteezy.com/free-vector/dog-line-drawing
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,17 +84,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-All previous README information was provided by create-react-app, the following information was added my application creator.
-
-README
-
-    This application is my second phase project for the Flatiron School's software developement program. Its made for the independent dog walker, and show todays walks based off their uploaded dog data. Currently there is no database connected, so it can only be used while running a local json-server. 
-
-WEBSITE/CONTACT
-
-    my website is www.beaulazear.com, feel free to reach out with any questions about code / use.
-
-NOTICE
-
-    my background image was utilized from a free vecor website, and all credit goes to https://www.vecteezy.com/free-vector/dog-line-drawing
