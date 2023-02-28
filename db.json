@@ -353,6 +353,36 @@
         "5": false,
         "6": true
       }
+    },
+    {
+      "name": "Beau",
+      "address": "827 Monroe St",
+      "walkTime": "2 pm",
+      "walkDuration": "30 minutes",
+      "bio": "",
+      "days": {
+        "1": false,
+        "2": false,
+        "3": false,
+        "4": false,
+        "5": true
+      },
+      "id": 18
+    },
+    {
+      "name": "Dog",
+      "address": "444",
+      "walkTime": "2 pm",
+      "walkDuration": "30 min",
+      "bio": "Good dog",
+      "days": {
+        "1": false,
+        "2": false,
+        "3": false,
+        "4": false,
+        "5": true
+      },
+      "id": 19
     }
   ]
 }
